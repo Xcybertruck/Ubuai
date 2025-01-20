@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape and GIF Manipulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div id="logoLoader">
+        <img id="logoImage" src="default-logo.png" alt="Loading...">
+    </div>
+    <div id="loginForm" style="display: none;">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="loginBtn">Login</button>
+    </div>
+    <div id="signupForm" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupUsername" placeholder="Username">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button id="signupBtn">Sign Up</button>
+    </div>
+    <div class="app-simulator">
+        <button id="toggleLogin">Login</button>
+        <button id="toggleSignup">Sign Up</button>
+        <canvas id="gameCanvas" width="320" height="240"></canvas>
+        <div id="controls">
+            <button id="toggleCodeView">Toggle Code View</button>
+            <button id="toggleHistory">Toggle History</button>
+            <button id="saveState">Save Current State</button>
+        </div>
+        <div id="codeView">
+            <h3>Function Code:</h3>
+            <pre><code id="functionCode"></code></pre>
+            <h3>Event Handler Code:</h3>
+            <pre><code id="eventHandlerCode"></code></pre>
+        </div>
+        <div id="history">
+            <h3>History:</h3>
+            <div id="historyList"></div>
+        </div>
+        <div id="gifUpload">
+            <h3>Upload GIF:</h3>
+            <input type="file" id="gifInput" accept="image/gif">
+            <img id="gifPreview" src="" alt="GIF Preview" style="display: none;">
+        </div>
+        <button id="toggleSettings">Settings</button>
+        <div id="settings">
+            <h3>Settings</h3>
+            <button id="editBio">Edit Bio</button>
+            <button id="changeUsername">Change Username</button>
+            <label>
+                <input type="checkbox" id="useBiometrics"> Use Biometrics for Login
+            </label>
+            <br>
+            <label for="themeToggle">Toggle Theme:</label>
+            <input type="checkbox" id="themeToggle" name="themeToggle">
+            <button id="toggleAdminPanel">Admin Panel</button>
+            <div id="adminPanel">
+                <h3>Admin Options</h3>
+                <button id="editSite">Edit Site</button>
+            </div>
+        </div>
+    </div>
+    <div id="bioEdit" style="display: none;">
+        <h2>Edit Bio</h2>
+        <textarea id="bioContent" placeholder="Write your bio here..."></textarea>
+        <label>Social Media Links:</label><br>
+        <input type="url" id="socialLink1" placeholder="Link 1"><br>
+        <input type="url" id="socialLink2" placeholder="Link 2"><br>
+        <button id="saveBio">Save Bio</button>
+    </div>
+    <div id="passwordReset" style="display: none;">
+        <h2>Reset Password</h2>
+        <input type="password" id="newPassword" placeholder="New Password">
+        <button id="resetPassword">Reset Password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
